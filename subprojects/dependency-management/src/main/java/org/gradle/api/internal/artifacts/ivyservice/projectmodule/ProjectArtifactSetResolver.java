@@ -38,7 +38,7 @@ import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 
-@ServiceScope(Scopes.Build)
+@ServiceScope(Scopes.Build.class)
 public class ProjectArtifactSetResolver {
     private final ArtifactResolver artifactResolver;
     // Move this state closer to the project metadata

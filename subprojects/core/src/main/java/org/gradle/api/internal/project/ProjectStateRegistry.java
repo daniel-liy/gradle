@@ -32,7 +32,7 @@ import java.util.Collection;
  * A registry of all of the projects present in a build tree.
  */
 @ThreadSafe
-@ServiceScope(Scopes.BuildTree)
+@ServiceScope(Scopes.BuildTree.class)
 public interface ProjectStateRegistry {
     /**
      * Returns all projects in the build tree.
