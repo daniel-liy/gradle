@@ -15,7 +15,7 @@
  */
 package org.gradle.api.internal.artifacts.ivyservice.projectmodule
 
-import org.gradle.api.artifacts.ModuleIdentifier
+
 import org.gradle.api.artifacts.component.ComponentIdentifier
 import org.gradle.api.internal.artifacts.component.ComponentIdentifierFactory
 import org.gradle.api.internal.project.ProjectState
