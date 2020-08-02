@@ -122,7 +122,7 @@ public class ProjectDependencyResolver implements ComponentMetaDataResolver, Dep
     @Override
     public ArtifactSet resolveArtifacts(final ComponentResolveMetadata component, final ConfigurationMetadata configuration, final ArtifactTypeRegistry artifactTypeRegistry, final ExcludeSpec exclusions, final ImmutableAttributes overriddenAttributes) {
         if (isProjectModule(component.getId())) {
-            return artifactSetResolver.create(component.getId(), component.getModuleVersionId(), component.getSources(), exclusions, configuration.getVariants(), component.getAttributesSchema(), artifactTypeRegistry, overriddenAttributes);
+            return artifactSetResolver.resolveArtifacts(component.getId(), component.getModuleVersionId(), component.getSources(), exclusions, configuration.getVariants(), component.getAttributesSchema(), artifactTypeRegistry, overriddenAttributes);
         } else {
             return null;
         }

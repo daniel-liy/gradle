@@ -61,7 +61,10 @@ public class ProjectArtifactSetResolver {
         this.artifactResolver = artifactResolver;
     }
 
-    public ArtifactSet create(ComponentIdentifier componentIdentifier, ModuleVersionIdentifier ownerId, ModuleSources moduleSources, ExcludeSpec exclusions, Set<? extends VariantResolveMetadata> variants, AttributesSchemaInternal schema, ArtifactTypeRegistry artifactTypeRegistry, ImmutableAttributes selectionAttributes) {
+    /**
+     * Creates an {@link ArtifactSet} that represents the available artifacts for the given set of project variants.
+     */
+    public ArtifactSet resolveArtifacts(ComponentIdentifier componentIdentifier, ModuleVersionIdentifier ownerId, ModuleSources moduleSources, ExcludeSpec exclusions, Set<? extends VariantResolveMetadata> variants, AttributesSchemaInternal schema, ArtifactTypeRegistry artifactTypeRegistry, ImmutableAttributes selectionAttributes) {
         // TODO - do not cache if override attributes are not empty
         // TODO - do not cache if artifacts were excluded
         // TODO - include artifact type attributes in the cache key
